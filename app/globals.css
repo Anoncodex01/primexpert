@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Leaflet map display - no card */
+.leaflet-container {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Force map to display - parent has explicit height */
+.africa-map-wrapper .leaflet-container {
+  height: 1600px !important;
+  min-height: 1600px !important;
+}
+
+.africa-map-compact .leaflet-container {
+  height: 900px !important;
+  min-height: 900px !important;
+}
+
+.leaflet-control-zoom,
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+/* Pointer on country shapes so users know they are clickable */
+.africa-map-wrapper .leaflet-interactive,
+.africa-map-compact .leaflet-interactive {
+  cursor: pointer !important;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --navy: #0f2847;
+  --navy-light: #1a3a5c;
+  /* Brand color */
+  --brand: #3D66F4;
+  --brand-light: #6B8FF8;
+  --brand-dark: #2d54c4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-brand: var(--brand);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.hero-marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Highlights section: hide scrollbar to remove blue accent line */
+.highlights-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  outline: none;
+}
+.highlights-scroll::-webkit-scrollbar {
+  display: none;
+}
