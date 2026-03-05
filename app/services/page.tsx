@@ -6,9 +6,6 @@ import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const GRADIENT =
-  "linear-gradient(to bottom, #d4e0ff 0%, #e0e9ff 25%, #e8eeff 50%, #f0f4ff 75%, #f8faff 100%)";
-
 const SERVICES = [
   {
     title: "Research",
@@ -51,14 +48,13 @@ const SERVICES = [
 export default function ServicesPage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-white">
-      <div className="min-h-screen w-full" style={{ background: GRADIENT }}>
+      <div className="min-h-screen w-full bg-white">
         <Header />
         <main>
-          {/* Hero - gradient background, title and description */}
+          {/* Hero - solid white background, title and description */}
           <section
             className="relative flex w-full flex-col justify-end overflow-hidden rounded-b-2xl px-4 pt-28 pb-16 sm:pt-32 md:pt-36 md:pb-20"
             style={{
-              background: "linear-gradient(135deg, #3D66FA 0%, #132947 100%)",
               minHeight: "clamp(280px, 38vh, 420px)",
             }}
           >
@@ -68,17 +64,17 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-[#3D66F4] sm:text-5xl md:text-6xl">
                 Our Services
               </h1>
-              <p className="mt-4 text-lg leading-relaxed text-white/90 md:text-xl">
+              <p className="mt-4 text-lg leading-relaxed text-stone-700 md:text-xl">
                 High-quality research, data handling & management, and M&E to support development initiatives across Tanzania, East Africa, and beyond.
               </p>
             </motion.div>
           </section>
 
           {/* Content */}
-          <div className="pt-16 pb-20 md:pt-24 md:pb-28" style={{ background: GRADIENT }}>
+          <div className="pt-16 pb-20 md:pt-24 md:pb-28 bg-white">
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
 
               {/* Intro */}

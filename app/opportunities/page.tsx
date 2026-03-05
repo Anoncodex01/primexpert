@@ -50,29 +50,26 @@ export default function OpportunitiesPage() {
   }, [sortBy]);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#E4EAFE]">
-      <div className="min-h-screen w-full">
+    <div className="min-h-screen overflow-x-hidden bg-white">
+      <div className="min-h-screen w-full bg-white">
         <Header />
 
-        {/* Hero - gradient */}
+        {/* Hero - solid white */}
         <section
           className="relative flex w-full flex-col justify-end overflow-hidden rounded-b-2xl px-4 pt-28 pb-16 sm:pt-32 md:pt-36 md:pb-20"
-          style={{
-            background: "linear-gradient(135deg, #3D66FA 0%, #132947 100%)",
-            minHeight: "clamp(280px, 38vh, 420px)",
-          }}
+          style={{ minHeight: "clamp(280px, 38vh, 420px)" }}
         >
           <div className="mx-auto w-full max-w-4xl pb-2 text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-[#3D66F4] sm:text-5xl md:text-6xl">
               Opportunities
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-white/90 md:text-xl">
+            <p className="mt-4 text-lg leading-relaxed text-stone-700 md:text-xl">
               Join our team of experts in research, data & M&E across East Africa.
             </p>
           </div>
         </section>
 
-        <main className="px-4 py-12 sm:px-6 lg:px-8 bg-[#E4EAFE]">
+        <main className="px-4 py-12 sm:px-6 lg:px-8 bg-white">
           <div className="mx-auto max-w-3xl">
             {/* Intro + form (like screenshot) */}
             <p className="text-stone-700 leading-relaxed">
