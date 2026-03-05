@@ -69,12 +69,6 @@ export default function CTASection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
-                <a
-                  href="mailto:info@primeexpertise.co.tz"
-                  className="inline-flex items-center rounded-xl border border-[#3D66F4]/30 bg-white px-6 py-3 text-sm font-semibold text-[#3D66F4] transition hover:bg-[#3D66F4]/5"
-                >
-                  Contact Us
-                </a>
               </div>
             </div>
           </div>

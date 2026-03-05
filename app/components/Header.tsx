@@ -7,14 +7,17 @@ import HeaderSearch from "./HeaderSearch";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-4 md:px-8 md:pt-5">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-4 md:px-8 md:pt-5"
+      style={{ background: "linear-gradient(to bottom, #e4ecff 0%, rgba(228,236,255,0.85) 60%, transparent 100%)" }}
+    >
       <motion.div
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-4 rounded-full border border-[#3D66F4]/15 px-5 shadow-lg backdrop-blur-sm md:h-16 md:gap-6 md:px-6"
+        className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 rounded-full border border-[#3D66F4]/15 px-5 shadow-lg backdrop-blur-sm md:h-16 md:gap-6 md:px-6"
         style={{
-          background: "rgba(212, 224, 255, 0.82)",
+          background: "#e4ecff",
           boxShadow: "0 4px 24px rgba(61, 102, 244, 0.12)",
         }}
       >

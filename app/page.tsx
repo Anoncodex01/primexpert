@@ -5,6 +5,7 @@ import ServicesSection from "./components/ServicesSection";
 import OurOfficesMap from "./components/OurOfficesMap";
 import HighlightsSection from "./components/HighlightsSection";
 import CTASection from "./components/CTASection";
+import GetInTouch from "./components/GetInTouch";
 import Footer from "./components/Footer";
 
 const HERO_GRADIENT =
@@ -14,12 +15,9 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-white">
       <div className="min-h-screen w-full overflow-hidden rounded-none md:rounded-none">
-        <div
-          className="w-full"
-          style={{ background: HERO_GRADIENT }}
-        >
+        <div className="w-full" style={{ background: HERO_GRADIENT }}>
           <Header />
-          <div className="pt-16 md:pt-20">
+          <div className="pt-10 md:pt-14">
             <Hero />
           </div>
         </div>
@@ -28,6 +26,7 @@ export default function Home() {
         <OurOfficesMap />
         <HighlightsSection />
         <CTASection />
+        <GetInTouch />
       </div>
       <Footer />
     </div>

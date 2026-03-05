@@ -44,7 +44,10 @@ export default function Footer() {
           {/* Brand column - Logo & Photographs description */}
           <div>
             <FooterLogo />
-            <div className="mt-4 space-y-3 text-sm leading-relaxed text-stone-600">
+            <h3 className="mt-4 text-sm font-semibold uppercase tracking-widest text-[#3D66F4]">
+              Photographs Usage
+            </h3>
+            <div className="mt-2 space-y-3 text-sm leading-relaxed text-stone-600">
               <p>
                 All photographs featured on this website were taken by Prime Expertise personnel
                 with the prior consent of the subjects for our clients. We have obtained written
@@ -68,7 +71,7 @@ export default function Footer() {
                 href="https://wa.me/255735074907"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-stone-500 transition hover:bg-stone-100 hover:text-stone-900"
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-[#3D66F4] transition hover:bg-[#3D66F4]/10 hover:text-[#2342a8]"
                 aria-label="WhatsApp"
               >
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -79,7 +82,7 @@ export default function Footer() {
                 href="https://twitter.com/PrimeExpertise"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-stone-500 transition hover:bg-stone-100 hover:text-stone-900"
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-[#3D66F4] transition hover:bg-[#3D66F4]/10 hover:text-[#2342a8]"
                 aria-label="X (Twitter)"
               >
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -90,7 +93,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/primeexpertise"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-stone-500 transition hover:bg-stone-100 hover:text-stone-900"
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-[#3D66F4] transition hover:bg-[#3D66F4]/10 hover:text-[#2342a8]"
                 aria-label="LinkedIn"
               >
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -145,19 +148,15 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Copyright & legal - centered, blue bar with white text */}
-        <div className="relative -mx-8 mt-12 flex flex-col items-center gap-3 rounded-b-3xl bg-[#3D66F4] px-8 py-6 text-center sm:-mx-10 lg:-mx-14">
+        {/* Copyright & legal - blue bar with white text */}
+        <div className="relative -mx-8 mt-12 rounded-b-3xl bg-[#3D66F4] px-8 py-6 text-center sm:-mx-10 lg:-mx-14">
           <p className="text-xs text-white">
             © {currentYear} Prime Expertise Limited. All Rights Reserved.
           </p>
-          <p className="mx-auto max-w-3xl text-[11px] leading-relaxed text-white/90">
-            We are a registered, limited liability company in the United Republic of Tanzania
-            (Registration Certificate No. 144452399). Prime Expertise Limited also has a valid
-            Business License No. BL01396912024-2500038016, reissued on 10 June 2025, and a Tanzania
-            Revenue Authority certificate of registration with Taxpayer Identification Number No.
-            144-452-399.
+          <p className="mt-2 mx-auto max-w-4xl text-[11px] leading-relaxed text-white/90">
+            We are a registered, limited liability company in the United Republic of Tanzania (Registration Certificate No. 144452399). Prime Expertise Limited also has a valid Business License No. BL01396912024-2500038016, reissued on 10 June 2025, and a Tanzania Revenue Authority certificate of registration with Taxpayer Identification Number No. 144-452-399.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+          <div className="mt-3 flex flex-wrap justify-center gap-4 sm:gap-6">
             <Link href="#" className="text-xs text-white transition hover:text-white/80">
               Privacy Policy
             </Link>

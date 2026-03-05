@@ -76,54 +76,20 @@ export default function HighlightsSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
-          className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
+          className="flex flex-col items-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <header>
-            <span className="inline-block rounded-full bg-[#3D66F4]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#3D66F4]">
-              Case Studies
-            </span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-[#3D66F4] sm:text-4xl md:text-5xl">
+          <header className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-[#3D66F4] sm:text-4xl md:text-5xl">
               Highlights of Our Work
             </h2>
-            <div className="mt-2 flex" aria-hidden>
+            <div className="mt-2 flex justify-center" aria-hidden>
               <span className="h-1 w-12 rounded-full bg-[#3D66F4]" />
             </div>
-            <p className="mt-3 max-w-xl text-base leading-relaxed text-stone-600">
-              Selected projects showcasing our expertise in research, data & M&E across East Africa.
-            </p>
           </header>
-          <div className="flex shrink-0 items-center gap-2">
-            <button
-              type="button"
-              onClick={() => scroll("left")}
-              aria-label="Scroll left"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-600 shadow-sm transition hover:border-[#3D66F4]/30 hover:bg-[#3D66F4]/5 hover:text-[#3D66F4]"
-            >
-              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={() => scroll("right")}
-              aria-label="Scroll right"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-600 shadow-sm transition hover:border-[#3D66F4]/30 hover:bg-[#3D66F4]/5 hover:text-[#3D66F4]"
-            >
-              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-            <Link
-              href="/case-studies"
-              className="rounded-xl bg-[#3D66F4] px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-[#3D66F4]/25 transition hover:bg-[#2d54c4] hover:shadow-[#3D66F4]/30"
-            >
-              View All
-            </Link>
-          </div>
         </motion.div>
 
         <motion.div
@@ -192,6 +158,29 @@ export default function HighlightsSection() {
             ))}
           </div>
         </motion.div>
+
+        <div className="mt-6 flex justify-center gap-2">
+          <button
+            type="button"
+            onClick={() => scroll("left")}
+            aria-label="Scroll left"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-600 shadow-sm transition hover:border-[#3D66F4]/30 hover:bg-[#3D66F4]/5 hover:text-[#3D66F4]"
+          >
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={() => scroll("right")}
+            aria-label="Scroll right"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-600 shadow-sm transition hover:border-[#3D66F4]/30 hover:bg-[#3D66F4]/5 hover:text-[#3D66F4]"
+          >
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -37,9 +37,9 @@ export default function TrustedBy() {
               {CLIENT_LOGOS.map(({ src, alt }) => (
                 <div
                   key={src}
-                  className="flex items-center justify-center p-2"
+                  className="flex items-center justify-center p-3"
                 >
-                  <div className="relative h-14 w-full max-w-[150px] md:h-16 md:max-w-[170px]">
+                  <div className="relative h-16 w-full max-w-[170px] md:h-20 md:max-w-[200px]">
                     <Image
                       src={src}
                       alt={alt}

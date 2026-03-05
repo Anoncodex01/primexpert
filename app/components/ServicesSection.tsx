@@ -49,10 +49,7 @@ export default function ServicesSection() {
           <div className="mt-4 flex justify-center" aria-hidden>
             <span className="h-1 w-12 rounded-full bg-[#3D66F4]" />
           </div>
-          <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-stone-600">
-            Research, data handling & management, and M&E services to support
-            development initiatives.
-          </p>
+          
         </motion.header>
 
         <motion.div

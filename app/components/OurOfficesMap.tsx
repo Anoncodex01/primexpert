@@ -17,19 +17,12 @@ export default function OurOfficesMap() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <span className="inline-block rounded-full bg-[#3D66F4]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#3D66F4]">
-            Our Reach
-          </span>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-[#3D66F4] sm:text-4xl md:text-5xl">
-            Our Offices
+          <h2 className="text-3xl font-bold tracking-tight text-[#3D66F4] sm:text-4xl md:text-5xl">
+            Our Outreach: Serving the SDGs
           </h2>
           <div className="mt-1.5 flex justify-center" aria-hidden>
             <span className="h-1 w-12 rounded-full bg-[#3D66F4]" />
           </div>
-          <p className="mx-auto mt-2 max-w-xl text-base leading-relaxed text-stone-600">
-            Headquartered in Tanzania, we deliver research, data & M&E services
-            across East Africa and beyond.
-          </p>
         </motion.header>
       </div>
 
@@ -61,9 +54,6 @@ export default function OurOfficesMap() {
           {/* SDG panel - right side */}
           <div className="mt-8 flex flex-col lg:mt-0 lg:w-[380px] lg:shrink-0">
             <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-stone-200/60 lg:sticky lg:top-24">
-              <h3 className="text-xl font-bold tracking-tight text-[#3D66F4] sm:text-2xl">
-                Our Outreach: Serving the SDGs
-              </h3>
               <p className="mt-3 text-sm leading-relaxed text-stone-600">
                 We support the Sustainable Development Goals. The icons below (excluding the black and white ones) symbolise the areas in which we have provided our services to make a contribution towards achieving these goals.
               </p>
