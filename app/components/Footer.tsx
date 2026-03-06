@@ -19,13 +19,33 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-stone-100 px-4 py-12 sm:px-6 lg:px-8">
       <div
-        className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-white px-8 py-14 shadow-sm sm:px-10 lg:px-14 lg:py-16"
+        className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-white shadow-sm"
         style={{
           backgroundImage: `linear-gradient(to right, rgba(15,40,71,0.02) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(15,40,71,0.02) 1px, transparent 1px)`,
           backgroundSize: "32px 32px",
         }}
       >
+        {/* Get In Touch CTA - merged with footer, no gap */}
+        <div className="rounded-t-3xl bg-[#3D66F4] px-6 py-10 text-center sm:px-8 md:py-12">
+          <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
+            Get In Touch
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/95 sm:text-base">
+            Got an inquiry? Contact us by clicking the button below. Your email address will only be used to respond to your inquiry.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-[#132947] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#0f1f38]"
+          >
+            Contact Us
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
+
+        <div className="relative px-8 pb-14 pt-10 sm:px-10 lg:px-14 lg:pb-16 lg:pt-12">
         {/* Faint watermark */}
         <div
           className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.03]"
@@ -44,19 +64,15 @@ export default function Footer() {
           {/* Brand column - Logo & Photographs description */}
           <div>
             <FooterLogo />
-            <h3 className="mt-4 text-sm font-semibold uppercase tracking-widest text-[#3D66F4]">
+            <h3 className="mt-4 text-sm font-semibold tracking-tight text-[#3D66F4]">
               Photographs Usage
             </h3>
-            <div className="mt-2 space-y-3 text-sm leading-relaxed text-stone-600">
+            <div className="mt-2 space-y-3 text-sm leading-relaxed text-stone-600 text-justify">
               <p>
-                All photographs featured on this website were taken by Prime Expertise personnel
-                with the prior consent of the subjects for our clients. We have obtained written
-                consent from our clients to use and publish these photographs. Therefore, they
-                should not be used or republished without explicit, written permission.
+                All photographs featured on this website were taken by Prime Expertise personnel with the prior consent of the subjects for our clients. We have obtained written consent from our clients to use and publish these photographs. Therefore, they should not be used or republished without explicit, written permission.
               </p>
               <p>
-                If you see a photograph on this website that features your likeness and you would
-                like it to be removed, please contact us at{" "}
+                If you see a photograph on this website that features your likeness and you would like it to be removed, please contact us at{" "}
                 <a
                   href="mailto:dataprotection@primeexpertise.co.tz"
                   className="text-[#3D66F4] underline hover:no-underline"
@@ -147,6 +163,7 @@ export default function Footer() {
             </nav>
           </div>
         </motion.div>
+        </div>
 
         {/* Copyright & legal - blue bar with white text */}
         <div className="relative -mx-8 mt-12 rounded-b-3xl bg-[#3D66F4] px-8 py-6 text-center sm:-mx-10 lg:-mx-14">

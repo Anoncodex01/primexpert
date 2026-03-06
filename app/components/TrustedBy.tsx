@@ -17,40 +17,36 @@ const CLIENT_LOGOS = [
 
 export default function TrustedBy() {
   return (
-    <section className="bg-white py-10 md:py-12">
+    <section className="bg-white py-10 md:py-14">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-10">
-          {/* Left: "Trusted By" title + description */}
-          <div className="shrink-0 lg:max-w-sm">
-            <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#3D66F4] sm:text-4xl md:text-5xl">
-              Trusted
-              <br />
-              By
-            </h2>
-            <div className="mt-4" aria-hidden>
-              <span className="block h-1 w-12 rounded-full bg-[#3D66F4]" />
-            </div>
+        {/* Title: top center */}
+        <header className="mb-8 text-center md:mb-10">
+          <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#3D66F4] sm:text-4xl md:text-5xl">
+            Trusted By
+          </h2>
+          <div className="mt-4 flex justify-center" aria-hidden>
+            <span className="block h-1 w-12 rounded-full bg-[#3D66F4]" />
           </div>
-          {/* Right: logo grid */}
-          <div className="min-w-0 flex-1">
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-5">
-              {CLIENT_LOGOS.map(({ src, alt }) => (
-                <div
-                  key={src}
-                  className="flex items-center justify-center p-3"
-                >
-                  <div className="relative h-16 w-full max-w-[170px] md:h-20 md:max-w-[200px]">
-                    <Image
-                      src={src}
-                      alt={alt}
-                      fill
-                      className="object-contain object-center"
-                      sizes="(max-width: 640px) 150px, (max-width: 768px) 170px, 190px"
-                    />
-                  </div>
+        </header>
+        {/* Logos in their own section */}
+        <div className="rounded-xl border border-stone-200 bg-stone-50/50 px-6 py-8 md:px-8 md:py-10">
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {CLIENT_LOGOS.map(({ src, alt }) => (
+              <div
+                key={src}
+                className="flex items-center justify-center p-3"
+              >
+                <div className="relative h-16 w-full max-w-[170px] md:h-20 md:max-w-[200px]">
+                  <Image
+                    src={src}
+                    alt={alt}
+                    fill
+                    className="object-contain object-center"
+                    sizes="(max-width: 640px) 150px, (max-width: 768px) 170px, 190px"
+                  />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
